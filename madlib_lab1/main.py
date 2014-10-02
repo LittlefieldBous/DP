@@ -73,6 +73,7 @@ After I had the user put in the input I had to switch the answer to an integer.
 adjectives =["scary", "funny", "silly", "deranged"]
 adjectives.append("zombified")
 
+#A Dictionary -------------
 food = dict() #create dictionary object
 food = {"green":"gummy worms", "blue":"eyeballs","red":"bat wings"}
 
