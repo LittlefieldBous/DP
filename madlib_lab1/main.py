@@ -21,8 +21,12 @@ costume2 = raw_input("Enter a noun.")
 sound1 = raw_input("Enter a sound-word. For example zap, crash, pow etc.")
 num1 = raw_input("Enter a number 1-5.")
 x = raw_input("Enter a number 1-4.")
-job = raw_input("Enter a profession. For example nurse,fireman,web developer")
+job = raw_input("Enter a profession. For example nurse,fireman,web developer.")
 adj2 = raw_input("Enter a number 0-4.")
+color = raw_input("Enter a color")
+drink = raw_input("Enter your favorite beverage")
+sound2 = raw_input("Enter a sound-word. For example zap, crash, pow etc.")
+phrase = raw_input("Enter a short phrase or exclamation. For example, The British are coming!")
 
 #changed into an integer FOR THE ARRAY
 adj2 = int(adj2)
@@ -70,6 +74,14 @@ adjectives =["scary", "funny", "silly", "deranged"]
 adjectives.append("zombified")
 
 
+food = dict() #create dictionary object
+food = {"green":"gummy worms", "blue":"eyeballs","red":"bat wings"}
+
+#FOR LOOP
+i = 0
+while i<3:
+    i = i+1
+
 #PRINT STORY--------------
 print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " " + "and" + " " + str(name2) + " " + \
       "were driving around looking for a classmates Halloween party." + " " + "Hoping they would win first prize for best " \
@@ -80,12 +92,10 @@ print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " "
       " " + "spotted a" + " " + str(house) + "in the distance with the lights on." + "The two friends decided to knock on the door for help." + \
       str(name1) + "knocked on the door." + "A person wearing a mask was dressed as a" + adjectives[adj2] + str(job) +  "opened the door." + \
       "hello...may I help you?" + str(name2) + " " + "replied yes, our car broke down and we wondered if we could use your phone to call for help?" + " " +\
-      "Cerainly replied the" + str(job) + "."
-
-
-
-
-
+      "Certainly replied the" + str(job) + "." + "Let me get you my phone and some" +  str(color) +  " " + food["red"] + "and" + str(drink) + "while you wait." + "The" + " " + \
+      adjectives[adj2] + " " + str(job) + "disappeared into the kitchen." + " As" + str(name1) + " " + "and" + " " + str(name2) + " " +\
+      "waited in the living room they stared out the window it had started to rain." "Suddenly they heard a strange str(sound1)+ " " + outside." +\
+      "The sound grew louder and they heard someone cry out!" + str(phrase),i + "."
 
 
 
