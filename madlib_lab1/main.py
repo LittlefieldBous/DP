@@ -73,14 +73,8 @@ After I had the user put in the input I had to switch the answer to an integer.
 adjectives =["scary", "funny", "silly", "deranged"]
 adjectives.append("zombified")
 
-
 food = dict() #create dictionary object
 food = {"green":"gummy worms", "blue":"eyeballs","red":"bat wings"}
-
-#FOR LOOP
-i = 0
-while i<3:
-    i = i+1
 
 #PRINT STORY--------------
 print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " " + "and" + " " + str(name2) + " " + \
@@ -94,11 +88,15 @@ print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " "
       "hello...may I help you?" + str(name2) + " " + "replied yes, our car broke down and we wondered if we could use your phone to call for help?" + " " +\
       "Certainly replied the" + str(job) + "." + "Let me get you my phone and some" +  str(color) +  " " + food["red"] + "and" + str(drink) + "while you wait." + "The" + " " + \
       adjectives[adj2] + " " + str(job) + "disappeared into the kitchen." + " As" + str(name1) + " " + "and" + " " + str(name2) + " " +\
-      "waited in the living room they stared out the window it had started to rain." "Suddenly they heard a strange str(sound1)+ " " + outside." +\
-      "The sound grew louder and they heard someone cry out!" + str(phrase),i + "."
+      "waited in the living room they stared out the window it had started to rain." "Suddenly they heard a strange" + str(sound2)+ " " + "outside." +\
+      "The" + str(sound2) + " " + "grew louder...." + "They heard someone cry out!"
 
+#FOR LOOP-----
 
-
+i = 0
+while i<4:
+    print str(phrase)
+    i = i+1
 
 
 
