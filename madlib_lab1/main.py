@@ -29,6 +29,7 @@ sound2 = raw_input("Enter a sound-word. For example zap, crash, pow etc.")
 phrase = raw_input("Enter a short phrase or exclamation. For example, The British are coming!")
 monster = raw_input("enter a type of creatures name. For example dragon, saskatch etc.")
 n = raw_input("Enter any number.")
+phrase2 = raw_input("Enter a short exclamation. For example, yikes!")
 
 #changed into an integer FOR THE ARRAY and function
 adj2 = int(adj2)
@@ -81,21 +82,21 @@ food = dict() #create dictionary object
 food = {"green":"gummy worms", "blue":"eyeballs","red":"bat wings"}
 
 #PRINT STORY--------------
-print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " " + "and" + " " + str(name2) + " " + \
+print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + "and" + str(name2) + " " + \
       "were driving around looking for a classmates Halloween party." + " " + "Hoping they would win first prize for best " \
-      "costume," + " " + str(name1) + " " + "was dressed up as a" + " " +  str(costume1) + "." + " " + "While" + " " + str(name2) + " " + \
+      "costume," + " " + str(name1) + " " + "was dressed up as a" + str(costume1) + "." + "While" + " " + str(name2) + " " + \
       "thought he would compliment her outfit by dressing as a" + " " + str(costume2) + "." + " " + "Suddenly the car made a loud" + " " + \
       str(sound1)+ " " + str(name1) + " " + "and" + " " + str(name2) + "realized they were out of gas!" + " " + str(name1) + " " + "and" + str(name2) +  " " + \
       "grabbed their cell phones but there was no signal." + "They realized they were stuck in the middle of a" + " " + str(environment) + "." + str(name1) + \
       " " + "spotted a" + " " + str(house) + "in the distance with the lights on." + "The two friends decided to knock on the door for help." + \
-      str(name1) + "knocked on the door." + "A person wearing a mask was dressed as a" + adjectives[adj2] + str(job) +  "opened the door." + \
+      str(name1) + "knocked on the door." + "A person wearing a mask was dressed as a" + adjectives[adj2] + str(job) + " " + "opened the door." + \
       "hello...may I help you?" + str(name2) + " " + "replied yes, our car broke down and we wondered if we could use your phone to call for help?" + " " +\
       "Certainly replied the" + str(job) + "." + "Let me get you my phone and some" +  str(color) +  " " + food["red"] + "and" + str(drink) + "while you wait." + "The" + " " + \
       adjectives[adj2] + " " + str(job) + "disappeared into the kitchen." + " As" + str(name1) + " " + "and" + " " + str(name2) + " " +\
       "waited in the living room they stared out the window it had started to rain." "Suddenly they heard a strange" + str(sound2)+ " " + "outside." +\
       "The" + str(sound2) + " " + "grew louder...." + "They heard someone cry out!"
 
-#FOR LOOP-----
+#While LOOP-----
 
 i = 0
 while i<4:
@@ -104,12 +105,16 @@ while i<4:
 
 #Function
 def calcArea(n,y):
-    height = x * y
+    height = n * y
     return height
 a = calcArea(n, 2);
 
 
-print "When they looked out the window they thought thought they saw a" + str(monster) + " " + "The creature appeared to be " + a + "feet tall!"
+print "When they looked out the window they thought they saw a" + str(monster) + "!" + " " + "The creature appeared to be" + str(a) + "feet tall!" +\
+    "-Frightened they ran for the door but they couldn't get out." + "They both screamed out in unison..."
 
-#When they looked out the window they thought they saw a halloween character verb by.
-#(a ghost run by.) Then they heard another sound-word. It was as if a noun fallen to the ground.
+#For LOOP----
+for i in range(0,3):
+    print str(phrase2)
+    i = i+1
+
