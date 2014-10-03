@@ -30,6 +30,10 @@ phrase = raw_input("Enter a short phrase or exclamation. For example, The Britis
 monster = raw_input("enter a type of creatures name. For example dragon, saskatch etc.")
 n = raw_input("Enter any number.")
 phrase2 = raw_input("Enter a short exclamation. For example, yikes!")
+name3 = raw_input("Enter a name.")
+c = raw_input("Enter the name of a scary costume. For example, dracula.")
+d = raw_input("Enter the name of a scary costume. For example, dracula")
+n2 = raw_input("Enter any number.")
 
 #changed into an integer FOR THE ARRAY and function
 adj2 = int(adj2)
@@ -98,17 +102,26 @@ print "It was a cold," + str(adj1) + " " + "Halloween night." + str(name1) + " "
 
 #While LOOP-----
 
+'''
+while loop to repeat first phrase
+'''
+
 i = 0
-while i<4:
+while i<3:
     print str(phrase)
     i = i+1
 
-#Function
+#Function to come up with height of creature..I made another function below
+'''
+I made another function below with a conditiona. For this I tried the calculating function with two parameters.
+the user enters the number represented by n. the formula is n * 2 + 2, then I return the height of the creature from this
+made up calculation. str(a) represents the number
+'''
+
 def calcArea(n,y):
-    height = n * y
+    height = n * y + 2
     return height
 a = calcArea(n, 2);
-
 
 print "When they looked out the window they thought they saw a" + str(monster) + "!" + " " + "The creature appeared to be" + " " + str(a) + "feet tall!" +\
     "-Frightened they ran for the door but they couldn't get out." + "They both screamed out in unison..."
@@ -118,3 +131,31 @@ for i in range(0,3):
     print str(phrase2)
     i = i+1
 
+print "Then from outside the door they heard familiar laughter." + "It was" + str(name3) + " " + "their friend!" "They had arrived at the Halloween party after all!" + \
+      "as they looked around they saw a wall of mirrors and all their friends..."
+
+#FOR LOOP with array ---
+'''
+since they are looking in mirrors...I used an array of friends and had it repeat with the loop.
+using the index number.
+'''
+friends = ["Martha","Tami","Mike", "Steve"]
+for i in range(0,2):
+    print str(friends[0])
+    print str(friends[1])
+    print str(friends[2])
+    print str(friends[3])
+    i = i+1
+
+#Function and if/else conditional to come up with best costume..
+def halloween(c,d):
+ if n2 > 10:
+     return c
+ else:
+     return d
+h = halloween(c,d);
+
+print str(name1) + " " + "and" + str(name2) + " " +\
+      "were glad to have found the party but a little disappointed when " + \
+      "Steve won best costume." + "They had to admit though that he was the most horrifying" + \
+       str(h) + "they had ever seen!!"
