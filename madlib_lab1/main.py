@@ -27,9 +27,12 @@ color = raw_input("Enter a color")
 drink = raw_input("Enter your favorite beverage")
 sound2 = raw_input("Enter a sound-word. For example zap, crash, pow etc.")
 phrase = raw_input("Enter a short phrase or exclamation. For example, The British are coming!")
+monster = raw_input("enter a type of creatures name. For example dragon, saskatch etc.")
+n = raw_input("Enter any number.")
 
-#changed into an integer FOR THE ARRAY
+#changed into an integer FOR THE ARRAY and function
 adj2 = int(adj2)
+n = int(n)
 
 #CONDITIONAL-----------
 '''
@@ -99,5 +102,14 @@ while i<4:
     print str(phrase)
     i = i+1
 
+#Function
+def calcArea(n,y):
+    height = x * y
+    return height
+a = calcArea(n, 2);
 
 
+print "When they looked out the window they thought thought they saw a" + str(monster) + " " + "The creature appeared to be " + a + "feet tall!"
+
+#When they looked out the window they thought they saw a halloween character verb by.
+#(a ghost run by.) Then they heard another sound-word. It was as if a noun fallen to the ground.
