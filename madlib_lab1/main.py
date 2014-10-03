@@ -147,7 +147,7 @@ for i in range(0,2):
 
 #Function and if/else conditional to come up with best costume..
 def halloween(n,y):
- if n + 6 >= 10:
+ if n > 10:
      return c
  else:
      return d
