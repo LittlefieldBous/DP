@@ -33,7 +33,7 @@ phrase2 = raw_input("Enter a short exclamation. For example, yikes!")
 name3 = raw_input("Enter a name.")
 c = raw_input("Enter the name of a scary costume. For example, dracula.")
 d = raw_input("Enter the name of a scary costume. For example, dracula")
-n2 = raw_input("Enter any number.")
+n2 = raw_input("Enter any number 1-20.")
 
 #changed into an integer FOR THE ARRAY and function
 adj2 = int(adj2)
@@ -78,7 +78,7 @@ This array is used for describing the person at the door.
 After I had the user put in the input I had to switch the answer to an integer.
 '''
 
-adjectives =["scary", "funny", "silly", "deranged"]
+adjectives = ["scary", "funny", "silly", "deranged"]
 adjectives.append("zombified")
 
 #A Dictionary -------------
