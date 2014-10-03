@@ -12,7 +12,6 @@ response = raw_input("Welcome to the game Halloween Eve! Please enter your name.
 print "Hello, " + str(response) + "!" + " Please answer the following questions to play!"
 
 #QUESTIONS/STRINGS------
-
 adj1 = raw_input("enter an adjective.")
 name1 = raw_input("Enter a female name.")
 name2 = raw_input("Enter a male name.")
@@ -33,7 +32,6 @@ phrase2 = raw_input("Enter a short exclamation. For example, yikes!")
 name3 = raw_input("Enter a name.")
 c = raw_input("Enter the name of a scary costume. For example, dracula.")
 d = raw_input("Enter the name of a scary costume. For example, dracula")
-n2 = raw_input("Enter any number 1-20.")
 
 #changed into an integer FOR THE ARRAY and function
 adj2 = int(adj2)
@@ -148,12 +146,12 @@ for i in range(0,2):
     i = i+1
 
 #Function and if/else conditional to come up with best costume..
-def halloween(c,d):
- if n2 > 10:
+def halloween(n,y):
+ if n + 6 >= 10:
      return c
  else:
      return d
-h = halloween(c,d);
+h = halloween(n,2);
 
 print str(name1) + " " + "and" + str(name2) + " " +\
       "were glad to have found the party but a little disappointed when " + \
