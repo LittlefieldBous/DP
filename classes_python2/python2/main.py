@@ -9,11 +9,13 @@ class MainHandler(webapp2.RequestHandler):
 class Page(object):
     def __init__(self):
         self.title = "Welcome!"
+        self.css = "css/styles.css"
         self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>{self.title}</title>
+        <link href="{self.css}" rel="Stylesheet" type="text/css" />
     </head>
     <body>
         """
