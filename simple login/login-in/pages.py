@@ -5,10 +5,12 @@ Design Patterns
 Simple Login
 I wasn't sure where to place the if else statement and couldn't figure it out in time.
 '''
+'''
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
         self.response.write(print p.print_out()) #print into our browser
+'''
 
 class Page(object):
     def __init__(self):

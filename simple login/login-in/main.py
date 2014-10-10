@@ -4,9 +4,10 @@ Amy Littlefield-Bousamra
 Design Patterns
 Simple Login
 '''
- #use the webapp2 library
+#use the webapp2 library
 
 import webapp2
+from pages import Page   #from package import the Class
 
 class MainHandler(webapp2.RequestHandler):  #declaring a class
     def get(self):  #indent here. This function starts everything. below is html5 within the python there is a page head, body and close definied by '''.
