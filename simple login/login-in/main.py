@@ -9,7 +9,7 @@ Simple Login
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):  #declaring a class
-    def get(self):  #indent here. This function starts everything.
+    def get(self):  #indent here. This function starts everything. below is html5 within the python there is a page head, body and close definied by '''.
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
@@ -22,7 +22,7 @@ class MainHandler(webapp2.RequestHandler):  #declaring a class
         <header>
          <nav>
     <ul class="nav">
-    <li><a href="#home">Home</a></li>
+    <li><a href="#home">Veronica's Vineyards</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#tasting">Tasting Room</a></li>
     <li><a href="#wines">Our Wines</a></li>
@@ -82,7 +82,7 @@ class MainHandler(webapp2.RequestHandler):  #declaring a class
             content = self.request.GET['content']
             terms = self.request.GET['terms']
             dropdown = self.request.GET['terms']
-            self.response.write(page_head + ' ' + f_name + l_name + ' ' + address + ' ' + state + ' ' + zip + ' ' + email + page_close)
+            self.response.write(page_head + ' ' + f_name + l_name + ' ' + address + ' ' + state + ' ' + zip + ' ' + email + page_close)  #this is what I want printed whe returned...I'm not sure how to do the css for this?
         else:
             self.response.write(page_head + page_body + page_close) #prints the information on the page
 
