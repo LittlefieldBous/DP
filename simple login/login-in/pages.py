@@ -7,7 +7,8 @@ I wasn't sure where to place the if else statement and couldn't figure it out in
 '''
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-    self.response.write('Hello world')
+        p = Page()
+        self.response.write(print p.print_out()) #print into our browser
 
 class Page(object):
     def __init__(self):
@@ -74,8 +75,7 @@ class Page(object):
     </body>
 </html> """
 
-
 def print_out(self):
-        all = self.head + self.body + self.close
+        all = self.head + self.body + self.close  #print out and return all sections of the html.
         all = all.format(**locals())
         return all
