@@ -87,6 +87,23 @@ class MainHandler(webapp2.RequestHandler):  #declaring a class
         else:
             self.response.write(page_head + page_body + page_close) #prints the information on the page
 
+'''
+#dataobjects...
+scooby = Character()
+scooby.f_name = "scooby"
+scooby.l_name = "doo"
+scooby.address = "Shaggy's Place"
+scooby.email = "scooby@live.com"
+
+chars = [scooby]
+print chars[0].f_name
+class Character(object):
+    def __init__(self): #contructor function
+        self.f_name = ""
+        self.l_name = ""
+        self.address = ""
+        self.email = ""
+'''
 
 #never touch..it's what part of what makes python work within the browser
 app = webapp2.WSGIApplication([
