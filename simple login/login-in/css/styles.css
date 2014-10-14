@@ -19,11 +19,47 @@ img {
     filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-self.f_name{
-font-size:40px;
-
+#yes{
+float:left;
+margin-left:150px;
 }
 
+
+#box{
+position: absolute;
+left:140px;
+top: 856px;
+padding:2px;
+}
+
+#wrapper{
+position:absolute;
+left: 420px;
+top: 85px;
+width: 350px;
+margin: 5px 5px;
+background-color: #000000;
+border: 1px solid black;
+opacity: 0.8;
+filter: alpha(opacity=80); /* For IE8 and earlier */
+text-align: center;
+font-size: 16px;
+}
+
+#name {
+font-size: 18px;
+text-align:center;
+}
+
+#state_zip{
+ont-size: 18px;
+text-align:center;
+}
+
+#contact {
+font-size: 18px;
+text-align:center;
+}
 
 #theform {
     padding-top: 10px;
@@ -86,11 +122,6 @@ input:focus {
 border: 2px solid #494546;
 }
 
-
-#terms input{
-margin-left:-300px;
-padding-100px;
-}
 
 #terms p{
 margin-right:-100px;

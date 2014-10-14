@@ -6,11 +6,14 @@ Simple Login
 I wasn't sure where to place the if else statement and couldn't figure it out in time.
 '''
 
-class Page(object): #contructor method-function
+#creating a class
+class Page(object):
     def __init__(self):
-        self.title = "Wine Club Membership" #public title Welcome! self is = to this
+        self.title = "Welcome!"
         self.css = "css/styles.css"
+        self.email = ""
         self.head = """
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -49,29 +52,31 @@ class Page(object): #contructor method-function
             <option value = "dessert" selected>Dessert</option>
             <option value = "white" selected>White</option>
             <option value = "red" selected>Red</option>
-            </select> <br /> <br />
+            </select> <br />
             <h4>Would you like to receive our monthly newsletter regarding events and discounts?</h4>
            <label class="radio">No<input  type="radio" name="subject" value="No"/></label><label class="radio">Yes<input type="radio" name="subject" value="Yes" /></label><br/>
            <div id="textarea">
            <h4>We would love to hear from you! Please add any additional comments below.</h4><textarea name="content" cols="40" rows="5">
             </textarea>
             </div>
-
-            <div class="clearfix"></div>
-
-            <div id"terms">
-          <input type="checkbox" name="terms" id="checkbox"/>Yes, Sign Me Up!
-            </div>
-
+           <input type="checkbox" name="terms" id="box" value="yes"/><div id="yes">Yes, Sign Me Up!</div>
             <br />
-             <input type="submit" value="Submit" id="submit" />
+            <input type="submit" value="Submit" id="submit" />
+        </form>
         </div>
+
          """
         self.close = """
     </body>
 </html> """
 
-def print_out(self):
+    def print_out(self):
         all = self.head + self.body + self.close  #print out and return all sections of the html.
         all = all.format(**locals())
         return all
+
+    def format_all(self):
+        print "i run"
+        self.head = self.head.format(**locals())
+        self.body = self.body.format(**locals())
+

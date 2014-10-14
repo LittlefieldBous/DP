@@ -7,10 +7,38 @@ Simple Login
 #use the webapp2 library
 
 import webapp2
-from pages import Page   #from package import the Class
+from pages import Page  #from package import the page Class
+#could also write import pages
 
 class MainHandler(webapp2.RequestHandler):  #declaring a class
     def get(self):  #indent here. This function starts everything. below is html5 within the python there is a page head, body and close definied by '''.
+
+        #data objects
+        gilligan = Member()
+        gilligan.f_name = "Gilligan"
+        gilligan.l_name = "Jones"
+        gilligan.address = "406 Island View Drive"
+        gilligan.state = "Hawaii"
+        gilligan.zip = "92643"
+        gilligan.email = "gilligan@live.com"
+
+        skipper = Member()
+        skipper.f_name = "The Skipper"
+        skipper.l_name = "T. O'Toole"
+        skipper.address = "407 Island View Drive"
+        skipper.state = "Hawaii"
+        skipper.zip = "92643"
+        skipper.email = "skipper@live.com"
+
+        maryann = Member()
+        maryann.f_name = "Mary Ann"
+        maryann.l_name = "Matthews"
+        maryann.address = "412 Island View Drive"
+        maryann.state = "Hawaii"
+        maryann.zip = "92643"
+        maryann.email = "skipper@live.com"
+
+        #html
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
@@ -70,7 +98,7 @@ class MainHandler(webapp2.RequestHandler):  #declaring a class
         </form>
     </body>
 </html> '''
-
+        #get information
         if self.request.GET:
             #stores info we got from the form
 
@@ -83,27 +111,29 @@ class MainHandler(webapp2.RequestHandler):  #declaring a class
             content = self.request.GET['content']
             terms = self.request.GET['terms']
             dropdown = self.request.GET['terms']
+            #print the information
             self.response.write(page_head + ' ' + f_name + l_name + ' ' + address + ' ' + state + ' ' + zip + ' ' + email + page_close)  #this is what I want printed whe returned...I'm not sure how to do the css for this?
         else:
             self.response.write(page_head + page_body + page_close) #prints the information on the page
 
-'''
-#dataobjects...
-scooby = Character()
-scooby.f_name = "scooby"
-scooby.l_name = "doo"
-scooby.address = "Shaggy's Place"
-scooby.email = "scooby@live.com"
+        #data objects print
+        mems = [gilligan, skipper, maryann]
+        print mems[1].f_name
+        print mems[1].l_name
+        print mems[1].address
+        print mems[1].state
+        print mems[1].zip
+        print mems[1].email
 
-chars = [scooby]
-print chars[0].f_name
-class Character(object):
-    def __init__(self): #contructor function
+#data objects class example.
+class Member(object):
+    def __init__(self):
         self.f_name = ""
         self.l_name = ""
         self.address = ""
+        self.state = ""
+        self.zip = ""
         self.email = ""
-'''
 
 #never touch..it's what part of what makes python work within the browser
 app = webapp2.WSGIApplication([
