@@ -8,7 +8,7 @@ class MainHandler(webapp2.RequestHandler):
         p.title = "My page!"
         p.css = "css/styles.css"
         p.body ="Miss Piggy likes Chocolate!" #modify's self.body
-        self.response.write(p.print_out())
+        self.response.write(p.whole_page)
 
 
 #do not touch
