@@ -1,0 +1,13 @@
+
+/* CSS Document */
+
+body{
+ background-color: #C5D0c1;
+ /*background-image: url('/images/elephant.jpg');*/
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ color: #fdfdfd;
+ font-size: 30px;
+}
+
