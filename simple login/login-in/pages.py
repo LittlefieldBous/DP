@@ -7,7 +7,7 @@ I wasn't sure where to place the if else statement and couldn't figure it out in
 '''
 
 #creating a class
-class Page(object):
+class ResultsPage(object):
     def __init__(self):
         self.title = "Welcome!"
         self.css = "css/styles.css"

@@ -1,0 +1,185 @@
+
+/* CSS Document */
+
+body{
+background-color: #000000;
+background-image: url('/images/sunflower.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ z-index: -999;
+ color: #E88f3f;
+ font-family:"Courier", sans-serif;
+}
+
+img {
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+self.f_name{
+font-size:40px;
+
+}
+
+
+#form {
+    padding-top: 10px;
+    padding-bottom:15px;
+    float:right;
+    width: 640px;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 20px 20px 20px;
+    background-color:#0c1127;    /* green #8b8970;*/
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    text-align: center;
+    font-family:"Verdana", sans-serif;
+}
+
+form p {
+    font-weight: bold;
+    color: #0c1127;
+}
+
+.clearfix{
+clear:both
+}
+
+form {
+display: block;
+}
+
+
+h3{
+font-size:1.4em;
+text-align:center;
+}
+
+h4{
+font-size:1.2em;
+text-align:center;
+text-align:360px;
+
+}
+
+
+label.radio{
+    float:left;
+    margin-top: 1px;
+    margin-left: 40%;
+    padding: 5px;
+    border:1px solid black;
+  }
+
+input:focus {
+border: 2px solid #494546;
+}
+
+
+input {
+padding: 2%;
+margin-bottom:1%;
+border-radius: 2px;
+border: 1px solid #3a3a38;
+width:125px;
+}
+
+label {
+margin-left:15px;
+float:left;
+Font-size:1.2em;
+color: #f8ECDE;
+padding 5px;
+}
+
+#brand{
+margin-left:0;
+}
+
+#height{
+margin-left:112px;
+
+}
+
+#population{
+margin-left:-20px;
+}
+
+#lbs{
+margin-left:-28px;
+}
+
+#year{
+margin-left:58px;
+}
+
+#wrapper{
+padding-top: 10px;
+    padding-bottom:15px;
+    float:left;
+    width: 400px;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    background-color:#0c1127;    /* green #8b8970;*/
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    text-align: center;
+    font-family:"Verdana", sans-serif;
+}
+
+
+#submit{
+    font-family:"courier new", sans-serif;
+    color: #000000 !important;
+    font-size: 20px;
+    padding: 14px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #494546;
+    background: #C05e03;
+    margin-top:30px;
+    margin-left: 10px;
+    z-index: 1010;
+}
+
+#submit:hover {
+    color: #000000 !important;
+    background: #E88F3f;
+    z-index: 1010;
+}
+
+header{
+	display:inline;
+}
+
+.nav{
+background-color: #3a3a38;
+}
+
+nav{
+	display:inline;
+	text-align: center;
+	font-family: 'verdana', arial, san-serif;
+	size:30px;
+	}
+
+nav ul li{
+	clear:both;
+	display:inline-block;
+	padding:22px;
+	margin:2px;
+
+}
+
+nav li a{
+	color:#E88f3f;
+	font-family:"Courier", sans-serif;
+	font-size:22px;
+}
