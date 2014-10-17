@@ -99,23 +99,28 @@ padding 5px;
 
 #brand{
 margin-left:0;
+text-align: center;
 }
 
 #height{
 margin-left:112px;
+text-align: center;
 
 }
 
 #population{
 margin-left:-20px;
+text-align: center;
 }
 
-#lbs{
+#pounds{
 margin-left:-28px;
+text-align: center;
 }
 
 #year{
 margin-left:58px;
+text-align: center;
 }
 
 #wrapper{

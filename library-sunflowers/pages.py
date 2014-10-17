@@ -42,7 +42,7 @@ class ResultsPage(object):
             <label>Sunflower Variety/Brand: </label><input type="text" id="brand" name="brand" value = "Sunflower Variety"  /> <br />
             <label>Height/inches</label><input type="text" id="height"name="height" value = "Sunflower Height"/> <br />
             <label>Population:Plants per/acre: </label><input type="text" id="population" name="population"  value=" # of plants per acre" /> <br />
-            <label>Yield: pounds/lbs per acre?:</label><input type="text" id="lbs" name="lbs"  value="lbs/acre" /> <br />
+            <label>Yield: pounds/lbs per acre?:</label><input type="text" id="pounds" name="pounds"  value="lbs/acre" /> <br />
             <label>Crop Harvest Year: </label><input type="text" id="year" name="year"  value = "Harvest year"  /> <br />
             <input type="submit" value="Submit" id="submit" />
         </form>
