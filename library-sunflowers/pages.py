@@ -22,6 +22,7 @@ class ResultsPage(object):
     <body>
      """
         self.body = """
+
     <header>
          <nav>
     <ul class="nav">

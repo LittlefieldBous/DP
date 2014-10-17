@@ -21,19 +21,20 @@ class MainHandler(webapp2.RequestHandler):    #declaring a class
             #4.Sunflower Yield Pounds/lbs per acre - lbs
             #5.Crop Harvest Year - year
 
+
             sd1 = SunflowerData()
             sd1.brand = ''       # creating attributes here...
             sd1.height =  ''
             sd1.population = ''
-            sd1.lbs = ''
+            sd1.pounds = ''
             #calling a function
             #sd1.year = 2014
             #lib.add_sunflower(sd1)
 
             p = ResultsPage() #I want to make an instance
-            s = Sunflowers()
+            lib = Sunflowers()
             p.format_all()
-
+            lib.calc_profit()
 
             if self.request.GET: #has to be in handler
             #stores info we got from the form
@@ -44,9 +45,11 @@ class MainHandler(webapp2.RequestHandler):    #declaring a class
                 pounds = self.request.GET['pounds']
                 year = self.request.GET['year']
 
-                self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Sunflower Varieties Profit Calculator" + "</h3>" + ' ' + "<div id='name'>" + "Sunflower Variety/Brand:" + brand + "</div>" + "<div id='height2'>" + "Sunflower Height:" + height + "</div>" + "<div id='population2'>" +  "Population per Acre:" + ' ' + population + "</div>" + "<div id='pounds2'>" + "Pounds per Acre:" + pounds + ' ' + "<div id='year2'>" + year + "</div>" + "</br>" + "</div>" + p.close)
+                self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Sunflower Varieties Profit Calculator" + "</h3>" + ' ' + "<div id='name'>" + "Sunflower Variety/Brand:" + brand + "</div>" + "<div id='height2'>" + "Sunflower Height:" + height + "</div>" + "<div id='population2'>" + "Population per Acre:" + ' ' + population + "</div>" + "<div id='pounds2'>" + "Pounds per Acre:" + pounds + ' ' + "<div id='year2'>" + year + "</div>" "</br>" + "</div>" + p.close)
              #this is what I want printed whe returned...I'm not sure how to do the css for this?
             self.response.write(p.head + p.body + p.close)   #prints the information on the page
+
+
 
 
         #example of data objects that user could enter...
