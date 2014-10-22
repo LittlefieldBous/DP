@@ -14,13 +14,13 @@ from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):    #declaring a class
         def get(self):
+
             #attributes
             #1.Sunflower Variety/brand -brand
             #2.Sunflower Height per inches - height
             #3.Sunflower Population per acre -population
             #4.Sunflower Yield Pounds/lbs per acre - lbs
             #5.Crop Harvest Year - year
-
 
             sd1 = SunflowerData()
             sd1.brand = ''       # creating attributes here...
@@ -45,8 +45,8 @@ class MainHandler(webapp2.RequestHandler):    #declaring a class
                 pounds = self.request.GET['pounds']
                 year = self.request.GET['year']
 
-                self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Sunflower Varieties Profit Calculator" + "</h3>" + ' ' + "<div id='name'>" + "Sunflower Variety/Brand:" + brand + "</div>" + "<div id='height2'>" + "Sunflower Height:" + height + "</div>" + "<div id='population2'>" + "Population per Acre:" + ' ' + population + "</div>" + "<div id='pounds2'>" + "Pounds per Acre:" + pounds + ' ' + "<div id='year2'>" + year + "</div>" "</br>" + "</div>" + p.close)
-             #this is what I want printed whe returned...I'm not sure how to do the css for this?
+                self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Sunflower Varieties Profit Calculator" + "</h3>" + ' ' + "<div id='name'>" + "Sunflower Variety/Brand:" + brand + "</div>" + "<div id='height2'>" + "Sunflower Height:" + height + "</div>" + "<div id='population2'>" + "Population per Acre:" + ' ' + population + "</div>" + "<div id='pounds2'>" + "Pounds per Acre:" + pounds + ' ' + "<div id='year2'>" + year + "</div>" "</br>"  +  "</div>" + p.close)
+             #this is what I want printed whe repturned...I'm not sure how to do the css for this?
             self.response.write(p.head + p.body + p.close)   #prints the information on the page
 
 
