@@ -1,7 +1,7 @@
 class Page(object):  #borrowing stuff from the object class
     def __init__(self):
-        self.title = "Welcome!" #private
-        self.css = "css/styles.css" #private
+        self._title = "Welcome!" #private
+        self._css = "css/styles.css" #private
         self._head = """
 <!DOCTYPE HTML>
 <html>
@@ -56,6 +56,7 @@ class Page(object):  #borrowing stuff from the object class
     <br>
     <p>Nature Prints</p>
     <img src="images/camp.png" class="nature">
+    <img src="images/rcamp.png" class="nature">
     <img src="images/forest.png" class="nature">
     <img src="images/curltree.png" class="nature">
     <img src="images/moontree.png" class="nature">
