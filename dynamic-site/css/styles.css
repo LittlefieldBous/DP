@@ -24,6 +24,9 @@ font-size:40px;
 
 }
 
+#info{
+float:left;
+}
 
 #theform {
     padding-top: 10px;

@@ -1,12 +1,22 @@
 
 import webapp2
 from pages import Page
+#from data import Data
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page() #I want to make an instance of page
-        p.li = [['home'],['boy'],['girl'],['nature'],['animals'],['contact']]
+        p = Page()   #I want to make an instance of page
+        p.li = [['home'],['boy'],['girl'],['nature'],['animals']]
+        p.css = "css/styles.css"
+        #d = Data()
+
+        #d.home = self.request.GET['home']
+        #d.boy = self.request.GET['boy']
+        #d.girl = self.request.GET['girl']
+        #d.nature = self.request.GET['nature']
+        #d.animals = self.request.GET['animals']
         self.response.write(p.print_out())
+
         #self.response.write(p.print_out())
         #self.response.write('Hello world!')
         #if self.request.GET: #has to be in handler
