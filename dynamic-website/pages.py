@@ -56,24 +56,24 @@ class Page(object):  #borrowing stuff from the object class
  <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch">
  <table>
     <tr>
-        <th>Origin</th>
+        <th>Origin:</th>
         <td>(Possible origin) Chang Qu,Chinese historian 4th Century BS</td>
     </tr>
     <tr>
-        <th>Description</th>
+        <th>Description:</th>
         <td>A gigantic reptile with lion claws, scaly skin,tail of a serpent, wings and usually can breathe fire.</td>
     </tr>
 
     <tr>
-        <th>Literary Origin</th>
+        <th>Literary Origin:</th>
         <td>Greek Myth: Jason and the Golden Fleece-Argonautica written by Apollonius of Rhodes around 1300 BC.</td>
     </tr>
      <tr>
-        <th>Character's Name</th>
+        <th>Character's Name:</th>
         <td>First Dragon's character's name:Kholkikos or Colchian-that guarded the golden fleece.</td>
     </tr>
      <tr>
-        <th>Best Known Dragon in Children's literature</th>
+        <th>Best Known Dragon:</th>
         <td>Puff the Magic Dragon</td>
     </tr>
  </table>
