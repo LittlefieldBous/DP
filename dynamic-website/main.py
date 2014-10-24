@@ -37,15 +37,22 @@ class MainHandler(webapp2.RequestHandler):
         mermaid.literary = " 1000 BC: The first stories appeared in ancient Assyria, where the goddess Atargatis changed into a mermaid after killing her human lover. "
         mermaid.character = "Atargatis from Syria & Greek Legend of Thessalonike said to live in the Aegean Sea"
         mermaid.famous = "The Little Mermaid - written by Hans Christian Anderson"
-'''
-class   Data(object): #creature data
-    def __init__(self):   #put down attributes/data that we are collecting instances that exist for sunflower data
-        self.origin = ''
-        self.description = ''
-        self.literary = ''
-        self.character = ''
-        self.famous = ''
-'''
+
+        phoenix = Data()
+        phoenix.origin = "Egypt"
+        phoenix.description = "A large bird as big as an eagle with colorful feathers. Has the ability to die in it's own fire only to be resurrected and come to life again."
+        phoenix.literary = " An egyptian myth says that the Bennu(another name for the phoenix) bird burst forth from the heart of Osiris "
+        phoenix.character = "The phoenix is the fire bird used as a chariot for the Hindu god Vishnu. This stry appears in the Hindu epic Ramayana."
+        phoenix.famous = "Harry Potter: J.K. Rowlings has used a phoenix as a central symbol in her stories."
+
+        unicorn = Data()
+        unicorn.origin = "Mesopotamian art and myths from India and China "
+        unicorn.description = "A white horse with a single horn on the top of its head"
+        unicorn.literary = " 400 BC: Greek historian Ctesuas and in the bible God is said to have the strength of a unicorn. "
+        unicorn.character = "Named Karkadann the unicorn was strong and magical - From Persian and Arabia mythology"
+        unicorn.famous = "King Arthur and the Unicorn"
+
+
 
 #do not touch
 app = webapp2.WSGIApplication([

@@ -19,10 +19,14 @@ class   Data(object): #creature data
         self.character = ''
         self.famous = ''
 
-'''
-        d.origin = self.request.GET['origin']
-        d.description = self.request.GET['description']
-        d.literary = self.request.GET['literary']
-        d.character = self.request.GET['character']
-        d.famous = self.request.GET['famous']
-'''
+        if self.request.GET:
+            origin = self.request.GET['origin']
+            description = self.request.GET['description']
+            literary = self.request.GET['literary']
+            character = self.request.GET['character']
+            famous = self.request.GET['famous']
+        else:
+
+         self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Mythological Creatures" + "</h3>" + ' ' + "<div id='name'>" + "Sunflower Variety/Brand:" + brand + "</div>" + "<div id='height2'>" + "Sunflower Height:" + height + "</div>" + "<div id='population2'>" + "Population per Acre:" + ' ' + population + "</div>" + "<div id='pounds2'>" + "Pounds per Acre:" + pounds + ' ' + "<div id='year2'>" + year + "</div>" "</br>"  +  "</div>" + p.close)
+             #this is what I want printed whe repturned...I'm not sure how to do the css for this?
+            self.response.write(p.head + p.body + p.close)   #prints the information on the page
