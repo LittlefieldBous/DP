@@ -51,17 +51,6 @@ class Page(object):  #borrowing stuff from the object class
     </div>
 </section>
 
-<!--
-<section>
- <div id ="info">
- <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch" id= "image" />
-  <form method="GET" action="">
-            <label>Origin: </label><input type="text" name="origin" value = "origin"  /> <br />
-            <label>Description: </label><input type="text" name="description" value = "description"/> <br />
-            <label>Literary Origin: </label><input type="text" name="literary" value="literary" id="literary" /> <br />
-            <label>Character's Name: </label><input type="text" name="character" value="character" id="character" /> <br />
-            <label>Best Known:</label><input type="text" name="famous" value="famous" id="famous" /> <br />-->
-
  <section>
  <div id ="info">
  <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch">
@@ -98,32 +87,46 @@ class Page(object):  #borrowing stuff from the object class
     </body>
 </html> """
 
+    def print_out(self):
+        all = self.head + self.body +  self.close  #print out and return all sections of the html.
+        return all
+
+
+
+'''
     def print_out(self):  #create print out method
         return self.head + self.body + self.close
 
 class ContentPage(Page):    #its inheriting it from the page
     def __init__(self):    #contstructor function for the super class
         super(ContentPage, self).__init__()
-        self._table_open= '<ul method = "GET">'
-        self._table_close = '</ul>'
-        self.__table = []
-        self._table = ''
+        self._table_open= '<table method = "GET">'
+        self._table_close = '</table>'
+        self.__objects = []
+        self._table_objects = ''
 
     @property
-    def table(self):
+    def objects(self):
         pass
 
-    @table.setter
-    def table(self, arr):  #change my private list variable
-        self.__table = arr
-        #sort through the array and create html lists based on the info there
-        for item in arr:
-            self._table += '<table id="info"' + item[0] + item[1] + item[2] + item[3]
-            if len(item)>4:
-                self._table += '" />'
+    @objects.setter
+    def objects(self, arr): #2nd parameter array
+        #change my private inputs variable.
+        self.__objects = arr
+        #sort through the mega array and create html inputs.
+        for item in arr:  #for each item in array  '# on next line was : print item   #print it
+            self._table_objects += '<td id="origin">' + item[0] + '</td>' + '<td id="description">' + item[1] + '</td>'+'<td id="description">' + item[2] + '</td>' + '<td id="literary">' + item[3] + '</td>' + '<td id="character">' + item[4] + '</td>'+ '<td id="famous">' + item[5] + '</td>'
+            #if there is a third item add ity in...otherwise... end the tag
+            if len(item) > 4:
+                self._table_objects += 'placeholder"' + item[2]+'" />'
+            #otherwise ..end the tag
+            else:
+                self._table_objects += '" />'
 
-        print self._table
+            print self._table_objects
 
-    #POLYMORPHISM
-    def print_out_li(self):
-        return self.head + self.body + self._table + self._table + self._table + self.close
+
+    def print_out_form(self):  #use all the attributes in page print function
+        return self.head + self.body + self._table_open +self._table_objects + self._table_close + self._close
+
+'''
