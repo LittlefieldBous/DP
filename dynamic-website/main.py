@@ -7,13 +7,14 @@ Dynamic Website
 
 import webapp2
 from data import Data, Creatures  #importing Datapage
-from pages import Page   #importing pages.py
+from pages import Page, ContentPage   #importing pages.py
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page()   #I want to make an instance of page
+        p = ContentPage()   #I want to make an instance of page
         info = Creatures()  #data object instance
         p.css = "css/styles.css"
+
 
         #data objects
         #dragon d = data
@@ -67,7 +68,8 @@ class MainHandler(webapp2.RequestHandler):
         d5.famous = "King Arthur and the Unicorn"
         info.add_creature(d5)
 
-        p.body = info.compile_list()
+        p.close = info.compile_list()
+        #self.response.write(p.head + p.body + p.data + p.close)
         self.response.write(p.print_out())
         #self.response.write(self.head + self.body + self.close)
         #info.creature_list = [d1, d2, d3, d4, d5] #if it was public
@@ -77,8 +79,6 @@ class MainHandler(webapp2.RequestHandler):
 
             #if id = "dragon"
             #return Data(d5)
-
-
 
 
 #do not touch

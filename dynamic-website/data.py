@@ -50,6 +50,6 @@ class Data(object): #creature data
     def click(self):
         return compile()
 
-    #@year.setter
-    def Data(self, d1,d2,d3,d4,d5):
-            print Data()
+    #@Data.setter
+    #def Data(self, d1,d2,d3,d4,d5):
+            #print Data()

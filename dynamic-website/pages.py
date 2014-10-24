@@ -20,38 +20,33 @@ class Page(object):  #borrowing stuff from the object class
    <body>
      """
         self.body = """
-
+    <div id = "wrapper">
     <header>
-   <h1>Friedrich Johann Justin Bertuch</h1>
-   <img src="images/Bertuch.jpg" alt="drawing of a unicorn by Bertuch">'
-   <h2>German Artist/Writer 1747-1822</h2>
-   <p> The origins of Bertuch's mythological creatures in literature</p>
-
-   <p>Place a paragraph about Bertuch here.</p>
-
-    </header>
-
-<div class ="container">
-
-<section>
-    <div id="links">
-            <nav>
+            <nav id ="links">
             <ul>
-            <li id="dragon"><a href="#dragon">The Dragon</a></li>
+            <li <a href="#dragon">The Dragon</a></li>
             <li id="satyr"><a href="#satyr">The Satyr</a></li>
             <li id="mermaid"><a href="#mermaid">The Mermaid</a></li>
             <li id="phoenix"><a href="#phoenix">The Phoenix</a></li>
             <li id="unicorn"><a href="#unicorn">The Unicorn</a></li>
             </ul>
             </nav>
-        </div>
-</section>
+             <h1>Friedrich Johann Justin Bertuch</h1>
+    <h2>German Artist/Writer 1747-1822</h2>
+    <img src="images/Bertuch.jpg" id ="bertuch" alt="drawing of a unicorn by Bertuch">
+            <h4> The origins of Bertuch's mythological creatures in literature</h4>
+    </header>
+  </div>
 
-</div>
  """
         self.close = """
+        <div id = "creatures">
+            <div id ="info">
+        </div>
+        </div>
     </body>
 </html> """
+
 
     def print_out(self):
         all = self.head + self.body + self.close  #print out and return all sections of the html.
@@ -64,8 +59,8 @@ class Page(object):  #borrowing stuff from the object class
 class ContentPage(Page):    #its inheriting it from the page
     def __init__(self):    #contstructor function for the super class
         super(ContentPage, self).__init__()
-        self._div_open= '<table method = "GET">'
-        self._div_close = '</table>'
+        self._div_open= '<div method = "GET">'
+        self._div_close = '</div>'
         self.__objects = []
         self._div_objects = ''
 
