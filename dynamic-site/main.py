@@ -12,7 +12,7 @@ from pages import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()   #I want to make an instance of page
-        p.li = [['dragon'],['satyr'],['mermaid'],['phoenix'],['unicorn'],['snakeman'],['griffin'],['horse']]
+        p.li = [['dragon'],['satyr'],['mermaid'],['phoenix'],['unicorn'],['snakeman'],['griffin']
         p.css = "css/styles.css"
         #d = Data()
 

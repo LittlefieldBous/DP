@@ -5,16 +5,24 @@ Design Patterns
 Dynamic Website
 '''
 
-#class Library(object):
-    #def __init__(self):
-        #self.data = Data()
+
+class DataPage(object):
+    def __init__(self):
+        self.__creature_list = []
 
 
-#class Data(object):
-    #def __init__(self):
-        #self.home = ''
-        #self.boy = ''
-        #self.girl = ''
-        #self.nature = ''
-        #self.animals = ''
+class   Data(object): #creature data
+    def __init__(self):   #put down attributes/data that we are collecting instances that exist for sunflower data
+        self.origin = ''
+        self.description = ''
+        self.literary = ''
+        self.character = ''
+        self.famous = ''
 
+'''
+        d.origin = self.request.GET['origin']
+        d.description = self.request.GET['description']
+        d.literary = self.request.GET['literary']
+        d.character = self.request.GET['character']
+        d.famous = self.request.GET['famous']
+'''

@@ -8,18 +8,18 @@ Dynamic Website
 
 class Page(object):  #borrowing stuff from the object class
     def __init__(self):
-        self._title = "Welcome!" #private
-        self._css = "css/styles.css" #private
-        self._head = """
+        self.title = "Welcome!" #private
+        self.css = "css/styles.css" #private
+        self.head = """
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>{self._title}</title>
-        <link href="{self._css}" rel="Stylesheet" type="text/css" />
+     <head>
+        <title>{self.title}</title>
+        <link href="{self.css}" rel="Stylesheet" type="text/css" />
     </head>
    <body>
      """
-        self._body = """
+        self.body = """
 
     <header>
    <h1>Friedrich Johann Justin Bertuch</h1>
@@ -54,25 +54,25 @@ class Page(object):  #borrowing stuff from the object class
 <section>
  <div id ="info">
  <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch">
- <table>
-    <tr>
+ <table method="GET" action=">
+    <tr id="origin">
         <th>Origin:</th>
-        <td>(Possible origin) Chang Qu,Chinese historian 4th Century BS</td>
+        <td>(Possible origin) Chang Qu,Chinese historian 4th Century BC</td>
     </tr>
-    <tr>
+    <tr id ="description">
         <th>Description:</th>
         <td>A gigantic reptile with lion claws, scaly skin,tail of a serpent, wings and usually can breathe fire.</td>
     </tr>
 
-    <tr>
+    <tr id ="literary">
         <th>Literary Origin:</th>
         <td>Greek Myth: Jason and the Golden Fleece-Argonautica written by Apollonius of Rhodes around 1300 BC.</td>
     </tr>
-     <tr>
+     <tr id ="character">
         <th>Character's Name:</th>
         <td>First Dragon's character's name:Kholkikos or Colchian-that guarded the golden fleece.</td>
     </tr>
-     <tr>
+      <tr id ="famous">
         <th>Best Known Dragon:</th>
         <td>Puff the Magic Dragon</td>
     </tr>
@@ -83,12 +83,12 @@ class Page(object):  #borrowing stuff from the object class
 
 </div>
    """
-        self._close = """
+        self.close = """
     </body>
 </html> """
 
     def print_out(self):  #create print out method
-        return self._head + self._body + self._close
+        return self.head + self.body + self.close
 
 class ContentPage(Page):    #its inheriting it from the page
     def __init__(self):    #contstructor function for the super class
@@ -107,12 +107,12 @@ class ContentPage(Page):    #its inheriting it from the page
         self.__li = arr
         #sort through the array and create html lists based on the info there
         for item in arr:
-            self._ul_li_ += '<li id="home"' + item[0]
+            self._ul_li += '<li id="info"' + item[0]
             if len(item)>4:
                 self._ul_li += '" />'
 
-            print self._ul_li
+        print self._ul_li
 
     #POLYMORPHISM
     def print_out_li(self):
-        return self._head + self._body + self._ul_open + self._ul_li + self._ul_close + self._close
+        return self.head + self.body + self._ul_open + self._ul_li + self._ul_close + self.close

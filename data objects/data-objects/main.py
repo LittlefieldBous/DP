@@ -40,6 +40,9 @@ class Character(object):
         self.age = 0
         self.home_planet = ""
 
+def click(self): #self is the this in javascript
+        print "I've been clicked"
+
 
 
 app = webapp2.WSGIApplication([

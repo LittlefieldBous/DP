@@ -65,3 +65,4 @@ class ResultsPage(object):
         self.body = self.body.format(**locals())
 
 
+
