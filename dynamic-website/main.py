@@ -68,22 +68,18 @@ class MainHandler(webapp2.RequestHandler):
         info.add_creature(d5)
 
         p.body = info.compile_list()
-        self.response.write(p.print_out())  # prints it out
-#conditional or/and loop needed but not sure where or exactly how...
-'''
-        if self.request.GET:
-            origin = self.request.GET['origin']
-            description = self.request.GET['description']
-            literary = self.request.GET['literary']
-            character = self.request.GET['character']
-            famous = self.request.GET['famous']
-        else:
+        self.response.write(p.print_out())
+        #self.response.write(self.head + self.body + self.close)
+        #info.creature_list = [d1, d2, d3, d4, d5] #if it was public
 
-            self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Mythological Creatures" + "</h3>" + ' ' + "<div id='origin'>" + "Origin:" + self.origin + "</div>" + "<div id='description'>" + "Description:" + self.description + "</div>" + "<div id='literary'>" + "Literature:" + ' ' + self.literary + "</div>" + "<div id='character'>" + "Best Known:" + self.famous + "</div>" "</br>"  +  "</div>" + p.close)
-             #this is what I want printed whe returned...I'm not sure how to do the css for this?
-            self.response.write(p.head + p.body + p.close)   #prints the information on the page
+        # prints it out
+        #conditional or/and loop needed but not sure where or exactly how...
 
-'''
+            #if id = "dragon"
+            #return Data(d5)
+
+
+
 
 #do not touch
 app = webapp2.WSGIApplication([

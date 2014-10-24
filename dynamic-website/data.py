@@ -29,7 +29,7 @@ class Creatures(object):  #class dataPage
     def compile_list(self):
         output = ''
         for creature in self.__creature_list:
-            output +=   '<h4>' + 'Title:' + '</h4>' + creature.title + '<h4>' + '<img>' + creature.image + '>' + '<br>' + 'Origin:' + '</h4>' + creature.origin + '<br>'+ 'Description:' + creature.description + '</td>'+ '<td>' 'Literary:' + creature.literary +  '</td>' + '<td>' +"Characters:" + creature.character + '</td>' + '<td>'+ "Best Known:" + creature.famous + '</td>'
+            output += '<div id="info">' +  '<h4>' + 'Title:' + ' ' + creature.title + '</h4>' + '<img>' + creature.image + '<br>' + 'Origin:' + ' ' + creature.origin + '<br>'+ 'Description:' + ' ' + creature.description + '<br>' + 'Literary:' +  ' ' +creature.literary + '<br>' + "Characters:" + ' ' + creature.character + '<br>'+ "Best Known:" + ' ' + creature.famous + '</div>'
         return output
 
 
@@ -43,5 +43,13 @@ class Data(object): #creature data
         self.character = ''
         self.famous = ''
 
-    def click(self): #self is the this in javascript
-        print "I've been clicked"
+ #def click(self): #self is the this in javascript
+
+
+    @property
+    def click(self):
+        return compile()
+
+    #@year.setter
+    def Data(self, d1,d2,d3,d4,d5):
+            print Data()
