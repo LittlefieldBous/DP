@@ -17,6 +17,7 @@ class MainHandler(webapp2.RequestHandler):
         p.css = "css/styles.css"
         self.response.write(p.print_out())  # prints it out
 
+        #data objects
         dragon = Data()
         dragon.origin = "Chang Qu,Chinese historian 4th Century BC"
         dragon.description = "A gigantic reptile with lion claws, scaly skin,tail of a serpent, wings and usually can breathe fire"
@@ -53,6 +54,21 @@ class MainHandler(webapp2.RequestHandler):
         unicorn.famous = "King Arthur and the Unicorn"
 
 
+#conditional or/and loop needed but not sure where or exactly how...
+'''
+        if self.request.GET:
+            origin = self.request.GET['origin']
+            description = self.request.GET['description']
+            literary = self.request.GET['literary']
+            character = self.request.GET['character']
+            famous = self.request.GET['famous']
+        else:
+
+            self.response.write(p.body + "<div id='wrapper'>"+ "<h3>" "Mythological Creatures" + "</h3>" + ' ' + "<div id='origin'>" + "Origin:" + self.origin + "</div>" + "<div id='description'>" + "Description:" + self.description + "</div>" + "<div id='literary'>" + "Literature:" + ' ' + self.literary + "</div>" + "<div id='character'>" + "Best Known:" + self.famous + "</div>" "</br>"  +  "</div>" + p.close)
+             #this is what I want printed whe returned...I'm not sure how to do the css for this?
+            self.response.write(p.head + p.body + p.close)   #prints the information on the page
+
+'''
 
 #do not touch
 app = webapp2.WSGIApplication([

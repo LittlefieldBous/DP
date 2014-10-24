@@ -8,8 +8,8 @@ Dynamic Website
 
 class Page(object):  #borrowing stuff from the object class
     def __init__(self):
-        self.title = "Welcome!" #private
-        self.css = "css/styles.css" #private
+        self.title = "Welcome!"
+        self.css = "css/styles.css"
         self.head = """
 <!DOCTYPE HTML>
 <html>
@@ -51,7 +51,18 @@ class Page(object):  #borrowing stuff from the object class
     </div>
 </section>
 
+<!--
 <section>
+ <div id ="info">
+ <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch" id= "image" />
+  <form method="GET" action="">
+            <label>Origin: </label><input type="text" name="origin" value = "origin"  /> <br />
+            <label>Description: </label><input type="text" name="description" value = "description"/> <br />
+            <label>Literary Origin: </label><input type="text" name="literary" value="literary" id="literary" /> <br />
+            <label>Character's Name: </label><input type="text" name="character" value="character" id="character" /> <br />
+            <label>Best Known:</label><input type="text" name="famous" value="famous" id="famous" /> <br />-->
+
+ <section>
  <div id ="info">
  <img src="images/dragon.jpg" alt="drawing of a dragon by Bertuch">
  <table method="GET" action=">
@@ -93,26 +104,26 @@ class Page(object):  #borrowing stuff from the object class
 class ContentPage(Page):    #its inheriting it from the page
     def __init__(self):    #contstructor function for the super class
         super(ContentPage, self).__init__()
-        self._ul_open= '<ul method = "GET">'
-        self._ul_close = '</ul>'
-        self.__li = []
-        self._ul_li = ''
+        self._table_open= '<ul method = "GET">'
+        self._table_close = '</ul>'
+        self.__table = []
+        self._table = ''
 
     @property
-    def inputs(self):
+    def table(self):
         pass
 
-    @inputs.setter
-    def li(self, arr):  #change my private list variable
-        self.__li = arr
+    @table.setter
+    def table(self, arr):  #change my private list variable
+        self.__table = arr
         #sort through the array and create html lists based on the info there
         for item in arr:
-            self._ul_li += '<li id="info"' + item[0]
+            self._table += '<table id="info"' + item[0] + item[1] + item[2] + item[3]
             if len(item)>4:
-                self._ul_li += '" />'
+                self._table += '" />'
 
-        print self._ul_li
+        print self._table
 
     #POLYMORPHISM
     def print_out_li(self):
-        return self.head + self.body + self._ul_open + self._ul_li + self._ul_close + self.close
+        return self.head + self.body + self._table + self._table + self._table + self.close
